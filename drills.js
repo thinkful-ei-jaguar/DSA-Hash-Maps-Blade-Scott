@@ -44,14 +44,56 @@ const deleteDups = (string) => {
     }
     
   }
-  console.log(stringMap._hashTable);
+  console.log(stringMap);
   console.log(returnString);
 };
 
-deleteDups('google');
+// deleteDups('google');
+
+//#5
+
+// const palindromeCheck = (string) => {
+//   let stringMap = new Hashmap();
+  
+//   for(let i = 0; i < string.length; i++) {
+
+//     stringMap.set(string[i].toLowerCase(), string[i].toLowerCase());
+//   }
+
+//   console.log(string.length / 2);
+//   console.log(stringMap.length);
+
+//   let returnVal = Math.ceil(string.length / 2) === stringMap.length;
+  
+//   return console.log(returnVal);
+// };
+
+// palindromeCheck('acecarracecarr');
 
 
+function checkForPalindrome(str) {
+  const len = str.length;
+  const check = new Map();
+  
+  for(let i = 0; i < len;i++) {
+    check.has(str.charAt(i)) ? check.delete(str.charAt(i)) : check.set(str.charAt(i), null);
+  }
+  return console.log(check.size === 0 || (check.size === 1));
+}
+
+// checkForPalindrome('poopzzzz');
 
 
+const anagram = (arr) => {
+  const check = new Map();
+
+  for(let i = 0; i < arr.length; i++ ) {
+    
+  };
+
+  return console.log();
+};
+
+anagram();
 
 
